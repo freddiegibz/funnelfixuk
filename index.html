@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Website Funnel Fix</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            font-size: 18px; /* Big text for readability */
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: #222222;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #2E8B57; /* Sea Green */
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #246b43;
+        }
+
+        .btn-nav {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: left; /* Keep left aligned for readability usually, or center? Prompt says "Big text, clear spacing". Left align is often easier for lists. */
+        }
+        
+        .hero-subheadline {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .hero ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hero li::before {
+            content: "✓"; 
+            color: #2E8B57;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Before & After */
+        .comparison-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .comparison-box {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .placeholder-box {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .placeholder-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-card {
+            flex: 1;
+            min-width: 280px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        .pricing-card h3 {
+            margin-bottom: 10px;
+            color: #2E8B57;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            background-color: #f0f8ff; /* Light AliceBlue */
+            border-radius: 10px;
+            padding: 60px 20px;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .pricing-grid, .comparison-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Local Website Funnel Fix</div>
+            <a href="#cta" class="btn btn-nav">Get a Free Website Audit</a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Get More Calls & Bookings From Your Website</h1>
+            <p class="hero-subheadline">We fix the hidden problems on your site that are quietly losing you customers.</p>
+            
+            <ul>
+                <li>Make your website easier to use</li>
+                <li>Fix mobile issues</li>
+                <li>Clearer buttons and call-to-actions</li>
+                <li>Faster loading = more enquiries</li>
+            </ul>
+
+            <a href="#cta" class="btn">Get a Free Website Audit</a>
+        </div>
+    </section>
+
+    <!-- 3. Why Your Website Isn’t Bringing Customers -->
+    <section>
+        <div class="container">
+            <h2>Why Your Website Isn’t Bringing Customers</h2>
+            <p>Short list of common issues (plain English):</p>
+            <ul>
+                <li>Your main button is hidden on mobile</li>
+                <li>Your site loads slowly</li>
+                <li>Your offer isn’t clear at the top</li>
+                <li>Your contact form is too long</li>
+                <li>People don’t know what to do when they land on your page</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 4. Before & After Section -->
+    <section>
+        <div class="container">
+            <h2>Before & After</h2>
+            
+            <div class="comparison-grid">
+                <!-- Before -->
+                <div class="comparison-box before">
+                    <div class="placeholder-box">
+                        <img src="Exemplar/bad/bad.png" alt="Before - Website with issues">
+                    </div>
+                    <p>Cluttered, confusing, hard to read on phones.</p>
+                </div>
+
+                <!-- After -->
+                <div class="comparison-box after">
+                    <div class="placeholder-box">
+                        <img src="Exemplar/bad/good.png" alt="After - Fixed website">
+                    </div>
+                    <p>Clean, fast, easy for customers to book.</p>
+                </div>
+            </div>
+
+            <p class="caption">Clearer layout → more enquiries</p>
+        </div>
+    </section>
+
+    <!-- 5. What You Get -->
+    <section>
+        <div class="container">
+            <h2>What You Get</h2>
+            <ul>
+                <li>A short video showing what’s wrong</li>
+                <li>A quick redesign to make your site clearer</li>
+                <li>Fixes for mobile layouts</li>
+                <li>Faster load speed</li>
+                <li>More calls, enquiries and bookings</li>
+                <li>48-hour turnaround</li>
+                <li>Simple fixed pricing</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 6. Simple Pricing Section -->
+    <section>
+        <div class="container">
+            <h2>Simple, Honest Pricing</h2>
+
+            <div class="pricing-grid">
+                <!-- Package 1 -->
+                <div class="pricing-card">
+                    <h3>Package 1 — Quick Fix</h3>
+                    <span class="price">£250</span>
+                    <ul>
+                        <li>Mobile fixes</li>
+                        <li>Clear CTA added</li>
+                        <li>Small copy improvements</li>
+                        <li>Speed boost</li>
+                    </ul>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="pricing-card">
+                    <h3>Package 2 — Full Funnel Fix</h3>
+                    <span class="price">£500</span>
+                    <ul>
+                        <li>Everything in Quick Fix</li>
+                        <li>Full layout cleanup</li>
+                        <li>Stronger offer messaging</li>
+                        <li>Before/after video</li>
+                        <li>Priority delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Final Call to Action -->
+    <section id="cta">
+        <div class="container">
+            <div class="final-cta">
+                <h2>Want More Enquiries This Month?</h2>
+                <p>Get a free 5-minute video showing exactly what’s holding your site back.</p>
+                <br>
+                <a href="#" class="btn">Get a Free Website Audit</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
